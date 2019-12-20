@@ -1,0 +1,7 @@
+.nav-link.active {
+    border-bottom: "3px #27d727 solid";
+}
+
+.tab-content {
+    border: '1px #333 solid'
+}
