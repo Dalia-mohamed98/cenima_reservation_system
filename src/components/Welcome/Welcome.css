@@ -1,0 +1,11 @@
+#welcomeText{
+    font-weight: bold;
+    font-size: 50px;
+    }
+
+.wlc {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+}

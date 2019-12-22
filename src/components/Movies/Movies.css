@@ -1,0 +1,26 @@
+/* .nav-link.active {
+    border-bottom: "3px #27d727 solid";
+} */
+
+/* .tab-content {
+    border: "1px #ccc solid";
+    padding: "15px";
+    margin-bottom: "10px"
+} */
+
+.navStyle {
+    margin-top: 30px;
+    padding: 10px;
+    background: #eee;
+}
+
+.Box {
+    border: 1px #ccc solid ;
+    padding: 15px;
+    margin-bottom: 10px
+}
+
+.badgeTime {
+    display: inline-block;
+    margin: 0 5px;
+}

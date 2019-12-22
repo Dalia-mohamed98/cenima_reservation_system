@@ -1,0 +1,17 @@
+.linkStyle{
+    color: lightskyblue;
+    text-decoration: none;
+}
+
+.linkStyle:hover {
+    color: #17a6ff;
+    text-decoration: none;
+}
+
+.header
+{
+    padding-top: 10px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
