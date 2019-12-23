@@ -39,7 +39,7 @@ onChange(e){
 }
 render() {
     if (this.state.redirectToReferrer || sessionStorage.getItem('userData')) {
-        return (<Redirect to={'/home'}/>)
+        return (<Redirect to={'/Movies'}/>)
     }
     return (
         <form action="" method="post">

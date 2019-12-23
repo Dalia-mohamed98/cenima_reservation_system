@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Linkify from 'react-linkify';
+// import EditMovie from '../EditMovie/EditMovie'
 import './UserFeed.css';
 //import TimeAgo from 'react-timeago';
 class UserFeed extends Component {
@@ -12,6 +13,18 @@ class UserFeed extends Component {
 
         let userFeed = this.props.feedData
         .map(function (feedData, index) {
+            let dtime = JSON.parse(feedData[4]);
+            let selectT = []
+            for(let T in dtime){
+                       
+                selectT.push(
+                    <h4 className=" badge badge-info">{T}</h4>
+                    
+                )
+                selectT.push(
+                    <h4 className=" badge badge-info">{dtime[T]}</h4>
+                )
+            }
             return (
                 <div className="medium-12 columns" key={index}>
 
@@ -21,20 +34,31 @@ class UserFeed extends Component {
                             <div className="small-12 medium-10 columns about-people">
 
                                 <div className="about-people-author">
-                                    <p className="author-name">
-                                    <b>{this.props.name}</b>
-                                    <Linkify>{feedData.feed}</Linkify>
+                                    {/* <p className="author-name"> */}
+                                    <b>{feedData[0]}</b>
+                                    
+                                    <Linkify>{feedData[1]}</Linkify>
                                     <br/>
 
-                                    </p>
+                                    {/* </p> */}
+                                    <b>{feedData[3]} minutes</b>
+                                    <b>Screen No. {feedData[2]}</b>
+
+                                    <b>{selectT}</b>
+
 
                                 </div>
                             </div>
                             <div className="small-12 medium-2 columns add-friend">
                                 <div className="add-friend-action">
-                                    <button id="del" className="button small btn-color" onClick={this.props.deleteFeed} data={feedData.feed_id} value={this.props.index} >
+                                    <button id="del" className="button small btn-color" onClick={this.props.deleteFeed} data={feedData[0]} value={this.props.index} >
                                     <i className="fa fa-user-times" aria-hidden="true"></i>
                                     Delete
+                                    </button>
+                                    <button id="edit" className=" small btn btn-success" onClick={this.props.Edit} data={feedData[0]} value={this.props.index} >
+                                    <i className="fa fa-user-times" aria-hidden="true"></i>
+                                    Edit
+                                    {/* <EditMovie data={feedData[0]}/> */}
                                     </button>
                                 </div>
                             </div>
@@ -45,7 +69,7 @@ class UserFeed extends Component {
         }, this);
 
         return (
-        <div>
+        <div className="col-6 ">
         {userFeed}
 
         </div>

@@ -6,6 +6,8 @@ import Login from '././components/Login/Login';
 import Signup from '././components/Signup/Signup';
 import NotFound from '././components/NotFound/NotFound';
 import Movies from '././components/Movies/Movies';
+import AddMovie from '././components/AddMovie/AddMovie';
+import EditMovie from '././components/EditMovie/EditMovie';
 
 const Routes = () => (
     <BrowserRouter >
@@ -15,6 +17,8 @@ const Routes = () => (
             <Route path="/login" component={Login}/>
             <Route path="/Signup" component={Signup}/>
             <Route path="/Movies" component={Movies}/>
+            <Route path="/AddMovie" component={AddMovie}/>
+            <Route path="/EditMovie" component={EditMovie}/>
             <Route path="*" component={NotFound}/>
         </Switch>
     </BrowserRouter>
